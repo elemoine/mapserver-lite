@@ -1,5 +1,8 @@
 # mapserver-lite
 
+A simple set-up for running MapServer in CGI mode. Python's `http.server`
+module is used.
+
 Install MapServer and Python 3:
 
 ```
