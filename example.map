@@ -1,0 +1,20 @@
+MAP
+  EXTENT -97.238976 41.619778 -82.122902 49.385620
+  SIZE 800 600
+  CONFIG "MS_ERRORFILE" "ms.log"
+  DEBUG 5
+  WEB
+    METADATA
+      "wms_enable_request" "*"
+    END
+  END
+  PROJECTION
+   "init=epsg:4326"
+  END
+  LAYER
+    NAME modis
+    TYPE RASTER
+    STATUS DEFAULT
+    DATA mod09a12003161_ugl_ll_8bit.tif
+  END
+END
