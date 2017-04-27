@@ -1,0 +1,50 @@
+MAP
+  EXTENT 834029.662333 6509031.968616 859040.027493 6536556.182651
+  SIZE 800 600
+  CONFIG "MS_ERRORFILE" "ms.log"
+  DEBUG 5
+  WEB
+    METADATA
+      "wms_enable_request" "*"
+    END
+  END
+  PROJECTION
+   "init=epsg:2154"
+  END
+  SYMBOL
+    NAME "circle"
+    TYPE ellipse
+    FILLED true
+    POINTS
+      10 10
+    END
+  END
+  LAYER
+    NAME temp
+    TYPE RASTER
+    STATUS ON
+    #TILEINDEX TU2011_nuit.shp
+    DATA TS2011_nuit.tif
+    PROJECTION
+      "init=epsg:3946"
+    END
+    EXTENT 1831524.965 5152301.801 1860173.697 5192020.043
+  END
+  LAYER
+    NAME eau
+    TYPE POINT
+    STATUS ON
+    CONNECTIONTYPE OGR
+    CONNECTION "epo_eau_potable.epobornefont.shp"
+    PROJECTION
+      "init=epsg:2154"
+    END
+    EXTENT 834029.662333 6509031.968616 859040.027493 6536556.182651
+    CLASS
+      STYLE
+        SYMBOL "circle"
+        COLOR 255 0 0
+      END
+    END
+  END
+END
