@@ -11,14 +11,7 @@ MAP
   PROJECTION
    "init=epsg:2154"
   END
-  SYMBOL
-    NAME "circle"
-    TYPE ellipse
-    FILLED true
-    POINTS
-      10 10
-    END
-  END
+  SYMBOLSET "symbols.map"
   LAYER
     NAME temp
     TYPE RASTER
@@ -42,8 +35,15 @@ MAP
     EXTENT 834029.662333 6509031.968616 859040.027493 6536556.182651
     CLASS
       STYLE
-        SYMBOL "circle"
+        SYMBOL "square"
+        SIZE 16
         COLOR 255 0 0
+        OUTLINECOLOR 0 0 0
+      END
+      STYLE
+        SYMBOL "circle"
+        COLOR 0 0 255
+        SIZE 10
       END
     END
   END
