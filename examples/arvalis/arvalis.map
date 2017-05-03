@@ -1,0 +1,60 @@
+MAP
+  NAME "arvalis"
+  CONFIG "MS_ERRORFILE" "ms.log"
+  DEBUG 5
+  PROJECTION
+   "init=epsg:2154"
+  END
+  EXTENT 123479.667 6138081.314 1082313.349 7109748.333
+  WEB
+    METADATA
+      #"wms_title" "Le serveur Arvalis"
+      #"wms_onlineresource" "http://localhost:8000/cgi-bin/mapserv"
+      #"wms_srs" "EPSG:2154 EPSG:3857"
+      "wms_enable_request" "*"
+    END
+  END
+  LAYER
+    NAME "pluie"
+    TYPE RASTER
+    STATUS ON
+    DATA "P-ETP_16062016_10092016_d1c1_1km.tif"
+    EXTENT 123479.667 6138081.314 1082313.349 7109748.333
+    CLASS
+      EXPRESSION ([pixel] != -999)
+      STYLE
+        DATARANGE -620 -60
+        COLORRANGE 0 0 0 255 255 255
+        RANGEITEM "pixel"
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = -999)
+      STYLE
+        OPACITY 0
+      END
+    END
+  END
+  LAYER
+    NAME "dept"
+    TYPE Polygon
+    STATUS OFF
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=localhost dbname=formation_mapserver
+                user=formation password=formation"
+    DATA "geom from (select gid, geom, nom_dept, code_dept from dept) as sub using unique gid using srid=2154"
+    CLASS
+      STYLE
+        OUTLINECOLOR 255 255 255
+        OPACITY 80
+      END
+      LABEL
+        COLOR 0 0 0
+        SIZE 6
+        SHADOWCOLOR 0 255 0 # ne fonctionne pas
+        SHADOWSIZE 2 2
+      END
+      TEXT '[nom_dept] ([code_dept])'
+    END
+  END
+END
