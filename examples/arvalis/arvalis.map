@@ -8,10 +8,12 @@ MAP
   EXTENT 123479.667 6138081.314 1082313.349 7109748.333
   WEB
     METADATA
-      #"wms_title" "Le serveur Arvalis"
-      #"wms_onlineresource" "http://localhost:8000/cgi-bin/mapserv"
-      #"wms_srs" "EPSG:2154 EPSG:3857"
+      "wms_title" "Arvalis WMS"
       "wms_enable_request" "*"
+      "wms_srs" "EPSG:2154 EPSG:3857"
+      "wfs_title" "Arvalis WFS"
+      "wfs_enable_request" "*"
+      "wfs_srs" "EPSG:2154"
     END
   END
   LAYER
@@ -38,11 +40,12 @@ MAP
   LAYER
     NAME "dept"
     TYPE Polygon
-    STATUS OFF
+    STATUS ON
     CONNECTIONTYPE POSTGIS
     CONNECTION "host=localhost dbname=formation_mapserver
                 user=formation password=formation"
     DATA "geom from (select gid, geom, nom_dept, code_dept from dept) as sub using unique gid using srid=2154"
+    EXTENT 123479.667 6138081.314 1082313.349 7109748.333
     CLASS
       STYLE
         OUTLINECOLOR 255 255 255
@@ -55,6 +58,14 @@ MAP
         SHADOWSIZE 2 2
       END
       TEXT '[nom_dept] ([code_dept])'
+    END
+    METADATA
+      "wfs_title" "WFS dept"
+      "wfs_srs" "EPSG:2154"
+      "gml_include_items" "all"
+      "gml_featureid" "gid"
+      "wfs_enable_request" "*"
+      "wfs_extent" "123479.667 6138081.314 1082313.349 7109748.333"
     END
   END
 END
