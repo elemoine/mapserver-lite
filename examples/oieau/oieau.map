@@ -1,0 +1,37 @@
+MAP
+  CONFIG "MS_ERRORFILE" "ms.log"
+  DEBUG 5
+  WEB
+    METADATA
+      "ows_enable_request" "*"
+      "ows_title" "oieau"
+    END
+  END
+  PROJECTION
+    "init=epsg:2154"
+  END
+  # ne fonctionne pas dans qgis sans définir un extent sur MAP
+  # problème lié à la couche racine dans le wms capabilities
+  EXTENT 130514.999999841 6070207.99999999 1238659 7089836.99999892
+  SYMBOLSET "symbols.map"
+  LAYER
+    NAME sitehydro
+    TYPE POINT
+    STATUS ON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=localhost dbname=formation user=elemoine password=elemoine"
+    DATA "geom from sitehydro using unique gid using srid=2154"
+    METADATA
+      "ows_title" "site hydro"
+      "ows_srs" "EPSG:2154 EPSG:4326"
+    END
+    CLASS
+      STYLE
+        SYMBOL "circle"
+        SIZE 16
+        COLOR 255 0 0
+        OUTLINECOLOR 0 0 0
+      END
+    END
+  END
+END
