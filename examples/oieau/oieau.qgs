@@ -1,0 +1,578 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis projectname="" version="2.99.0-Master">
+  <title></title>
+  <autotransaction active="0"/>
+  <evaluateDefaultValues active="0"/>
+  <trust active="0"/>
+  <layer-tree-group>
+    <customproperties/>
+    <layer-tree-layer source=" restrictToRequestBBOX='1' srsname='EPSG:2154' typename='ms:massedeau' url='http://localhost:8000/cgi-bin/mapserv' version='auto' version='auto' table=&quot;&quot; sql=" providerKey="WFS" expanded="1" name="masse d eau wfs" checked="Qt::Checked" id="masse_d_eau_228cf9a7_30c7_4144_beb3_a35f618a405f">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer source=" restrictToRequestBBOX='1' srsname='EPSG:2154' typename='ms:sitehydro' url='http://localhost:8000/cgi-bin/mapserv' version='auto' version='auto' table=&quot;&quot; sql=" providerKey="WFS" expanded="1" name="site hydro wfs" checked="Qt::Unchecked" id="site_hydro_33a2e57a_e2ac_49c0_ace6_1e80c156b248">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer source="crs=EPSG:2154&amp;dpiMode=7&amp;format=image/png&amp;layers=massedeau&amp;styles=&amp;url=http://localhost:8000/cgi-bin/mapserv" providerKey="wms" expanded="1" name="masse d eau wms" checked="Qt::Unchecked" id="masse_d_eau_dea0e7cb_bb85_4725_a540_923961b3849f">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer source="crs=EPSG:2154&amp;dpiMode=7&amp;format=image/png&amp;layers=sitehydro&amp;styles=&amp;url=http://localhost:8000/cgi-bin/mapserv" providerKey="wms" expanded="1" name="site hydro wms" checked="Qt::Unchecked" id="site_hydro_123cfd4d_1d1e_4ce7_a257_666d0f4f01e4">
+      <customproperties/>
+    </layer-tree-layer>
+    <custom-order enabled="0">
+      <item>site_hydro_123cfd4d_1d1e_4ce7_a257_666d0f4f01e4</item>
+      <item>masse_d_eau_dea0e7cb_bb85_4725_a540_923961b3849f</item>
+      <item>site_hydro_33a2e57a_e2ac_49c0_ace6_1e80c156b248</item>
+      <item>masse_d_eau_228cf9a7_30c7_4144_beb3_a35f618a405f</item>
+    </custom-order>
+  </layer-tree-group>
+  <snapping-settings mode="2" enabled="0" unit="2" type="1" tolerance="0" intersection-snapping="0">
+    <individual-layer-settings>
+      <layer-setting enabled="0" type="1" tolerance="0" id="masse_d_eau_228cf9a7_30c7_4144_beb3_a35f618a405f" units="2"/>
+      <layer-setting enabled="0" type="1" tolerance="0" id="site_hydro_33a2e57a_e2ac_49c0_ace6_1e80c156b248" units="2"/>
+    </individual-layer-settings>
+  </snapping-settings>
+  <relations/>
+  <mapcanvas annotationsVisible="1" name="theMapCanvas">
+    <units>meters</units>
+    <extent>
+      <xmin>41281.26640860037878156</xmin>
+      <ymin>5151861.30684655345976353</ymin>
+      <xmax>2670110.35325270099565387</xmax>
+      <ymax>7570708.12005129083991051</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <destinationsrs>
+      <spatialrefsys>
+        <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+        <srsid>145</srsid>
+        <srid>2154</srid>
+        <authid>EPSG:2154</authid>
+        <description>RGF93 / Lambert-93</description>
+        <projectionacronym>lcc</projectionacronym>
+        <ellipsoidacronym>GRS80</ellipsoidacronym>
+        <geographicflag>false</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+    <layer_coordinate_transform_info>
+      <layer_coordinate_transform destDatumTransform="-1" layerid="site_hydro_33a2e57a_e2ac_49c0_ace6_1e80c156b248" srcDatumTransform="-1" destAuthId="EPSG:2154" srcAuthId="EPSG:2154"/>
+      <layer_coordinate_transform destDatumTransform="-1" layerid="masse_d_eau_dea0e7cb_bb85_4725_a540_923961b3849f" srcDatumTransform="-1" destAuthId="EPSG:2154" srcAuthId="EPSG:2154"/>
+      <layer_coordinate_transform destDatumTransform="-1" layerid="site_hydro_123cfd4d_1d1e_4ce7_a257_666d0f4f01e4" srcDatumTransform="-1" destAuthId="EPSG:2154" srcAuthId="EPSG:2154"/>
+      <layer_coordinate_transform destDatumTransform="-1" layerid="site_hydro_0e23a90e_edb3_4080_949d_9369a8f11155" srcDatumTransform="-1" destAuthId="EPSG:2154" srcAuthId="EPSG:2154"/>
+      <layer_coordinate_transform destDatumTransform="-1" layerid="masse_d_eau_228cf9a7_30c7_4144_beb3_a35f618a405f" srcDatumTransform="-1" destAuthId="EPSG:2154" srcAuthId="EPSG:2154"/>
+      <layer_coordinate_transform destDatumTransform="-1" layerid="masse_d_eau_c0565a36_2e4a_4d9d_915c_6e89e571b5a3" srcDatumTransform="-1" destAuthId="EPSG:2154" srcAuthId="EPSG:2154"/>
+    </layer_coordinate_transform_info>
+  </mapcanvas>
+  <legend updateDrawingOrder="true">
+    <legendlayer showFeatureCount="0" drawingOrder="-1" open="true" checked="Qt::Checked" name="masse d eau wfs">
+      <filegroup hidden="false" open="true">
+        <legendlayerfile isInOverview="0" layerid="masse_d_eau_228cf9a7_30c7_4144_beb3_a35f618a405f" visible="1"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer showFeatureCount="0" drawingOrder="-1" open="true" checked="Qt::Unchecked" name="site hydro wfs">
+      <filegroup hidden="false" open="true">
+        <legendlayerfile isInOverview="0" layerid="site_hydro_33a2e57a_e2ac_49c0_ace6_1e80c156b248" visible="0"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer showFeatureCount="0" drawingOrder="-1" open="true" checked="Qt::Unchecked" name="masse d eau wms">
+      <filegroup hidden="false" open="true">
+        <legendlayerfile isInOverview="0" layerid="masse_d_eau_dea0e7cb_bb85_4725_a540_923961b3849f" visible="0"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer showFeatureCount="0" drawingOrder="-1" open="true" checked="Qt::Unchecked" name="site hydro wms">
+      <filegroup hidden="false" open="true">
+        <legendlayerfile isInOverview="0" layerid="site_hydro_123cfd4d_1d1e_4ce7_a257_666d0f4f01e4" visible="0"/>
+      </filegroup>
+    </legendlayer>
+  </legend>
+  <mapViewDocks/>
+  <projectlayers>
+    <maplayer refreshOnNotifyEnabled="0" simplifyAlgorithm="0" minScale="1e+8" refreshOnNotifyMessage="" maxScale="0" readOnly="0" type="vector" geometry="Polygon" simplifyLocal="1" simplifyDrawingTol="1" simplifyMaxScale="1" autoRefreshEnabled="0" hasScaleBasedVisibilityFlag="0" autoRefreshTime="0" simplifyDrawingHints="1">
+      <extent>
+        <xmin>-10572355.3340274877846241</xmin>
+        <ymin>-2808713.31126713752746582</ymin>
+        <xmax>10263229.80157452449202538</xmax>
+        <ymax>8842877.84079167246818542</ymax>
+      </extent>
+      <id>masse_d_eau_228cf9a7_30c7_4144_beb3_a35f618a405f</id>
+      <datasource> restrictToRequestBBOX='1' srsname='EPSG:2154' typename='ms:massedeau' url='http://localhost:8000/cgi-bin/mapserv' version='auto' version='auto' table="" sql=</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>masse d eau wfs</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>145</srsid>
+          <srid>2154</srid>
+          <authid>EPSG:2154</authid>
+          <description>RGF93 / Lambert-93</description>
+          <projectionacronym>lcc</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">WFS</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <renderer-v2 enableorderby="0" type="singleSymbol" symbollevels="0" forceraster="0">
+        <symbols>
+          <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
+            <layer class="SimpleFill" enabled="1" pass="0" locked="0">
+              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
+              <prop v="99,209,228,255" k="color"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="0,0,0,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0.26" k="outline_width"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="solid" k="style"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option value="" type="QString" name="name"/>
+                  <Option name="properties"/>
+                  <Option value="collection" type="QString" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <fieldConfiguration/>
+      <aliases/>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults/>
+      <constraints/>
+      <constraintExpressions/>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="">
+        <columns/>
+      </attributetableconfig>
+      <editform></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <expressionfields/>
+      <previewExpression></previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer refreshOnNotifyEnabled="0" minScale="1e+8" refreshOnNotifyMessage="" maxScale="0" type="raster" autoRefreshEnabled="0" hasScaleBasedVisibilityFlag="0" autoRefreshTime="0">
+      <extent>
+        <xmin>130515</xmin>
+        <ymin>6070210</ymin>
+        <xmax>1238660</xmax>
+        <ymax>7089840</ymax>
+      </extent>
+      <id>masse_d_eau_dea0e7cb_bb85_4725_a540_923961b3849f</id>
+      <datasource>crs=EPSG:2154&amp;dpiMode=7&amp;format=image/png&amp;layers=massedeau&amp;styles=&amp;url=http://localhost:8000/cgi-bin/mapserv</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>masse d eau wms</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>145</srsid>
+          <srid>2154</srid>
+          <authid>EPSG:2154</authid>
+          <description>RGF93 / Lambert-93</description>
+          <projectionacronym>lcc</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property value="Undefined" key="identify/format"/>
+      </customproperties>
+      <provider>wms</provider>
+      <noData>
+        <noDataList useSrcNoData="0" bandNo="1"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer type="singlebandcolordata" opacity="1" band="1" alphaBand="-1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>None</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation saturation="0" colorizeOn="0" colorizeGreen="128" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyEnabled="0" minScale="1e+8" refreshOnNotifyMessage="" maxScale="0" type="raster" autoRefreshEnabled="0" hasScaleBasedVisibilityFlag="0" autoRefreshTime="0">
+      <extent>
+        <xmin>130515</xmin>
+        <ymin>6070210</ymin>
+        <xmax>1238660</xmax>
+        <ymax>7089840</ymax>
+      </extent>
+      <id>site_hydro_123cfd4d_1d1e_4ce7_a257_666d0f4f01e4</id>
+      <datasource>crs=EPSG:2154&amp;dpiMode=7&amp;format=image/png&amp;layers=sitehydro&amp;styles=&amp;url=http://localhost:8000/cgi-bin/mapserv</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>site hydro wms</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>145</srsid>
+          <srid>2154</srid>
+          <authid>EPSG:2154</authid>
+          <description>RGF93 / Lambert-93</description>
+          <projectionacronym>lcc</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property value="Undefined" key="identify/format"/>
+      </customproperties>
+      <provider>wms</provider>
+      <noData>
+        <noDataList useSrcNoData="0" bandNo="1"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer type="singlebandcolordata" opacity="1" band="1" alphaBand="-1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>None</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation saturation="0" colorizeOn="0" colorizeGreen="128" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyEnabled="0" simplifyAlgorithm="0" minScale="1e+8" refreshOnNotifyMessage="" maxScale="0" readOnly="0" type="vector" geometry="Point" simplifyLocal="1" simplifyDrawingTol="1" simplifyMaxScale="1" autoRefreshEnabled="0" hasScaleBasedVisibilityFlag="0" autoRefreshTime="0" simplifyDrawingHints="1">
+      <extent>
+        <xmin>27185.46390075713861734</xmin>
+        <ymin>6045646.50381223671138287</ymin>
+        <xmax>1336742.87824472109787166</xmax>
+        <ymax>7118743.13065960537642241</ymax>
+      </extent>
+      <id>site_hydro_33a2e57a_e2ac_49c0_ace6_1e80c156b248</id>
+      <datasource> restrictToRequestBBOX='1' srsname='EPSG:2154' typename='ms:sitehydro' url='http://localhost:8000/cgi-bin/mapserv' version='auto' version='auto' table="" sql=</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>site hydro wfs</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>145</srsid>
+          <srid>2154</srid>
+          <authid>EPSG:2154</authid>
+          <description>RGF93 / Lambert-93</description>
+          <projectionacronym>lcc</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">WFS</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <renderer-v2 enableorderby="0" type="singleSymbol" symbollevels="0" forceraster="0">
+        <symbols>
+          <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
+            <layer class="SimpleMarker" enabled="1" pass="0" locked="0">
+              <prop v="0" k="angle"/>
+              <prop v="32,118,168,255" k="color"/>
+              <prop v="1" k="horizontal_anchor_point"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="circle" k="name"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="0,0,0,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0" k="outline_width"/>
+              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="diameter" k="scale_method"/>
+              <prop v="2" k="size"/>
+              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
+              <prop v="MM" k="size_unit"/>
+              <prop v="1" k="vertical_anchor_point"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option value="" type="QString" name="name"/>
+                  <Option name="properties"/>
+                  <Option value="collection" type="QString" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <fieldConfiguration/>
+      <aliases/>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults/>
+      <constraints/>
+      <constraintExpressions/>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="">
+        <columns/>
+      </attributetableconfig>
+      <editform></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <expressionfields/>
+      <previewExpression></previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+  </projectlayers>
+  <layerorder>
+    <layer id="site_hydro_123cfd4d_1d1e_4ce7_a257_666d0f4f01e4"/>
+    <layer id="masse_d_eau_dea0e7cb_bb85_4725_a540_923961b3849f"/>
+    <layer id="site_hydro_33a2e57a_e2ac_49c0_ace6_1e80c156b248"/>
+    <layer id="masse_d_eau_228cf9a7_30c7_4144_beb3_a35f618a405f"/>
+  </layerorder>
+  <properties>
+    <WMSServiceAbstract type="QString"></WMSServiceAbstract>
+    <WMSPrecision type="QString">8</WMSPrecision>
+    <WMSOnlineResource type="QString"></WMSOnlineResource>
+    <Identify>
+      <disabledLayers type="QStringList"/>
+    </Identify>
+    <WMSAccessConstraints type="QString">None</WMSAccessConstraints>
+    <WMSImageQuality type="int">90</WMSImageQuality>
+    <WFSTLayers>
+      <Update type="QStringList"/>
+      <Insert type="QStringList"/>
+      <Delete type="QStringList"/>
+    </WFSTLayers>
+    <WCSUrl type="QString"></WCSUrl>
+    <Measure>
+      <Ellipsoid type="QString">GRS80</Ellipsoid>
+    </Measure>
+    <WMSContactOrganization type="QString"></WMSContactOrganization>
+    <WMSSegmentizeFeatureInfoGeometry type="bool">false</WMSSegmentizeFeatureInfoGeometry>
+    <WMSFees type="QString">conditions unknown</WMSFees>
+    <WMSContactPerson type="QString"></WMSContactPerson>
+    <SpatialRefSys>
+      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
+      <ProjectCRSID type="int">145</ProjectCRSID>
+      <ProjectCrs type="QString">EPSG:2154</ProjectCrs>
+      <ProjectCRSProj4String type="QString">+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</ProjectCRSProj4String>
+    </SpatialRefSys>
+    <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
+    <WMSContactPhone type="QString"></WMSContactPhone>
+    <WMSRequestDefinedDataSources type="bool">false</WMSRequestDefinedDataSources>
+    <PositionPrecision>
+      <Automatic type="bool">true</Automatic>
+      <DecimalPlaces type="int">2</DecimalPlaces>
+      <DegreeFormat type="QString">MU</DegreeFormat>
+    </PositionPrecision>
+    <Gui>
+      <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
+      <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
+      <CanvasColorRedPart type="int">255</CanvasColorRedPart>
+      <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
+      <SelectionColorRedPart type="int">255</SelectionColorRedPart>
+      <CanvasColorBluePart type="int">255</CanvasColorBluePart>
+      <SelectionColorBluePart type="int">0</SelectionColorBluePart>
+    </Gui>
+    <WFSUrl type="QString"></WFSUrl>
+    <Macros>
+      <pythonCode type="QString"></pythonCode>
+    </Macros>
+    <DefaultStyles>
+      <Fill type="QString"></Fill>
+      <Opacity type="double">1</Opacity>
+      <Marker type="QString"></Marker>
+      <ColorRamp type="QString"></ColorRamp>
+      <RandomColors type="bool">true</RandomColors>
+      <Line type="QString"></Line>
+    </DefaultStyles>
+    <Paths>
+      <Absolute type="bool">false</Absolute>
+    </Paths>
+    <WMSServiceTitle type="QString"></WMSServiceTitle>
+    <WMSKeywordList type="QStringList">
+      <value></value>
+    </WMSKeywordList>
+    <Legend>
+      <filterByMap type="bool">false</filterByMap>
+    </Legend>
+    <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
+    <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
+    <WFSLayers type="QStringList"/>
+    <WCSLayers type="QStringList"/>
+    <WMSContactPosition type="QString"></WMSContactPosition>
+    <WMSContactMail type="QString"></WMSContactMail>
+    <Measurement>
+      <AreaUnits type="QString">m2</AreaUnits>
+      <DistanceUnits type="QString">meters</DistanceUnits>
+    </Measurement>
+    <WMSUrl type="QString"></WMSUrl>
+  </properties>
+  <visibility-presets/>
+  <Annotations/>
+  <Layouts/>
+</qgis>
