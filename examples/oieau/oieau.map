@@ -1,19 +1,24 @@
 MAP
   CONFIG "MS_ERRORFILE" "ms.log"
   DEBUG 5
+
   WEB
     METADATA
       "ows_enable_request" "*"
       "ows_title" "oieau"
     END
   END
+
   PROJECTION
     "init=epsg:2154"
   END
+
   # ne fonctionne pas dans qgis sans définir un extent sur MAP
   # problème lié à la couche racine dans le wms capabilities
   EXTENT 130514.999999841 6070207.99999999 1238659 7089836.99999892
+
   SYMBOLSET "symbols.map"
+
   OUTPUTFORMAT
     NAME "geojson"
     DRIVER "OGR/GEOJSON"
@@ -21,12 +26,13 @@ MAP
     FORMATOPTION "FORM=simple"
     FORMATOPTION "STORAGE=filesystem"
   END
+
   LAYER
     NAME sitehydro
     TYPE POINT
     STATUS ON
     CONNECTIONTYPE POSTGIS
-    CONNECTION "host=localhost dbname=formation user=elemoine password=elemoine"
+    CONNECTION "host=localhost dbname=formation user=elemoine"
     DATA "geom from sitehydro using unique gid using srid=2154"
     METADATA
       "ows_title" "site hydro"
@@ -36,10 +42,37 @@ MAP
     CLASS
       STYLE
         SYMBOL "circle"
-        SIZE 16
-        COLOR 255 0 0
-        OUTLINECOLOR 0 0 0
+        SIZE 3
+        COLOR "#FF0000"
+        OUTLINECOLOR "#000000"
       END
     END
   END
+
+  LAYER
+    NAME massedeau
+    TYPE POLYGON
+    STATUS ON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=localhost dbname=formation user=elemoine"
+    DATA "geom from massedeau using unique gid using srid=4326"
+    PROJECTION
+      "init=epsg:4326"
+    END
+    METADATA
+      "ows_title" "masse d eau"
+      "ows_srs" "EPSG:2154 EPSG:4326"
+      "wfs_getfeature_formatlist" "geojson"
+    END
+    CLASS
+      STYLE
+        COLOR "#FF00002F"
+      END
+      STYLE
+        WIDTH 1
+        OUTLINECOLOR "#000000FF"
+      END
+    END
+  END
+
 END
