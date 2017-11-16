@@ -13,7 +13,7 @@ MAP
     "init=epsg:2154"
   END
 
-  # ne fonctionne pas dans qgis sans définir un extent sur MAP
+  # ne fonctionne pas dans QGIS 3 sans définir un extent sur MAP
   # problème lié à la couche racine dans le wms capabilities
   EXTENT 130514.999999841 6070207.99999999 1238659 7089836.99999892
 
