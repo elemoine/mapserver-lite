@@ -6,16 +6,23 @@ MAP
     METADATA
       "ows_enable_request" "*"
       "ows_title" "oieau"
+      "ows_srs" "EPSG:4326 EPSG:2154"
     END
   END
 
   PROJECTION
-    "init=epsg:2154"
+    "init=epsg:4326"
   END
 
-  # ne fonctionne pas dans QGIS 3 sans définir un extent sur MAP
-  # problème lié à la couche racine dans le wms capabilities
-  EXTENT 130514.999999841 6070207.99999999 1238659 7089836.99999892
+  # Dans le doc WMS GetCapabilities cet extent est associé à la couche racine.
+  #
+  # Si cet extent n'est pas spécifié dans le mapfile alors MapServer associe l'extent
+  # -1, -1, -1, -1 à la couche racine. Et QGIS 3 n'aime pas ça, il refuse de charger les
+  # couches avec l'erreur "Invalid Layer : WMS provider Cannot calculate extent".
+  #
+  # Ça ressemble à un bug dans QGIS. QGIS associe aux couches WMS l'extent de cette couche
+  # racine alors qu'il devrait leur associer leur propre extent.
+  EXTENT -5.05134823805543 41.5122133258992 10.618307819942 50.6713490213304
 
   SYMBOLSET "symbols.map"
 
@@ -34,16 +41,19 @@ MAP
     CONNECTIONTYPE POSTGIS
     CONNECTION "host=localhost dbname=formation user=elemoine"
     DATA "geom from sitehydro using unique gid using srid=2154"
+    PROJECTION
+      "init=epsg:2154"
+    END
     METADATA
       "ows_title" "site hydro"
-      "ows_srs" "EPSG:2154 EPSG:4326"
+      "ows_srs" "EPSG:4326 EPSG:2154"
       "wfs_getfeature_formatlist" "geojson"
     END
     CLASS
       STYLE
         SYMBOL "circle"
-        SIZE 3
-        COLOR "#FF0000"
+        SIZE 5
+        COLOR "#FF00F0"
         OUTLINECOLOR "#000000"
       END
     END
@@ -56,12 +66,9 @@ MAP
     CONNECTIONTYPE POSTGIS
     CONNECTION "host=localhost dbname=formation user=elemoine"
     DATA "geom from massedeau using unique gid using srid=4326"
-    PROJECTION
-      "init=epsg:4326"
-    END
     METADATA
       "ows_title" "masse d eau"
-      "ows_srs" "EPSG:2154 EPSG:4326"
+      "ows_srs" "EPSG:4326 EPSG:2154"
       "wfs_getfeature_formatlist" "geojson"
     END
     CLASS
